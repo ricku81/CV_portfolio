@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Micah's Digital CV</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Face, name, email, and phone -->
+      <img
+        src="profile-pic-old.jpg"
+        id="profile-pic"
+        alt="Micah's Photo"
+        height="200"
+      />
+      <h1>Micah Redd</h1>
+      <div id="contact">
+        <p id="my-email">
+          Email: <a href="mailto:Micah2free@gmail.com">Micah2free@gmail.com</a>
+        </p>
+        <p id="my-phone">Phone: (205) 394-9077</p>
+      </div>
+    </header>
+    <!-- Border on sections replaced -->
+    <!-- <hr /> -->
+    <main>
+      <h2>Summary</h2>
+      <!-- Who am I? Why switch? -->
+      <p id="summary">
+        After working in the food industry for around 7 years, I decided I
+        needed a change. I enrolled in Springboard's Software Engineering Career
+        Track to pursue my passion for technology and problem-solving. Through
+        this program, I have gained proficiency in various programming languages
+        and frameworks. My goal is to leverage my new skills to build a new and
+        better life for myself and my family.
+      </p>
+      <h2>Education</h2>
+      <!-- High School and continued learning -->
+      <ul>
+        <li>
+          <a href="https://www.springboard.com">Springboard</a> - Software
+          Engineering Career Track (2025 - 2026)
+        </li>
+        <li>
+          Tuscaloosa County High School - High School Diploma (2010 - 2014)
+        </li>
+      </ul>
+      <h2>Technologies</h2>
+      <table>
+        <!-- Table for Technologies. I used Lists inside because it looks cleaner. -->
+        <thead>
+          <tr>
+            <th>Skills</th>
+            <th>Other</th>
+            <th>Testing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>AI Tools Experience</li>
+                <li>Command Line</li>
+                <li>Git & GitHub</li>
+                <li>GraphQL</li>
+                <li>Internet Concepts</li>
+                <li>MERN Stack</li>
+                <li>RESTful APIs</li>
+                <li>Version Control</li>
+                <li>Web Development</li>
+                <li>Web Mechanics</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>Jasmine</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>Projects</h2>
+      <!-- No projects to show yet -->
+      <p>Coming soon!</p>
+      <h2>Accolades</h2>
+      <!-- Accomplishments -->
+      <ol>
+        <li>Graduated Tuscaloosa County High School with Honors</li>
+      </ol>
+    </main>
+    <!-- Border on sections replaced -->
+    <!-- <hr /> -->
+    <footer>
+      <!-- Three required Inputs to Contact Me via email through a Form -->
+      <form action="#">
+        <label for="name">Name:</label><br />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          minlength="2"
+          maxlength="50"
+          placeholder="Full Name"
+          required
+        /><br />
+        <label for="email">Email:</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          minlength="5"
+          maxlength="100"
+          placeholder="you@example.com"
+          required
+        /><br />
+        <label for="message">Message:</label><br />
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Write your message here..."
+          rows="5"
+          cols="50"
+          minlength="1"
+          maxlength="500"
+          required
+        ></textarea
+        ><br />
+        <button type="submit">Contact Me</button>
+      </form>
+      <br />
+      <!-- Links to Professional Socials -->
+      <p id="prof-socials-title">Professional Socials</p>
+      <p><a href="https://www.linkedin.com/in/micahredd">LinkedIn</a></p>
+      <p><a href="https://github.com/ricku81">GitHub</a></p>
+    </footer>
+  </body>
+</html>

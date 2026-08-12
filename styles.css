@@ -1,0 +1,232 @@
+/* Set root box-sizing to border-box and make all elements inherit it for predictable sizing. */
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Background gradient to add visual interest. Use Segoe UI as the base system font with a sans-serif fallback. */
+body {
+    background-color: #2A7B9B;
+    background-image: linear-gradient(190deg, #2A7B9B 0%, #57C785 50%, #EDDD53 100%);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Prevent text selection-like cursors by using the default cursor for most elements inside the body. */
+body * {
+    cursor: default;
+}
+
+/* Header uses flexbox. Mobile-first: stack header items vertically and center them. */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Profile picture styling: circular crop, white border, and subtle shadow for depth. */
+#profile-pic {
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 3px 10px 8px #00000033;
+}
+
+/* Name heading: decorative font, larger size for prominence, centered in the header. */
+h1 {
+    font-family: 'pinyon script', sans-serif;
+    font-size: 2em;
+    align-self: center;
+}
+
+/* Contact container on mobile: centered text and centered alignment within the header. */
+#contact {
+    text-align: center;
+    align-self: center;
+    margin-top: 10px;
+}
+
+/* Slightly larger font for contact details and small vertical spacing. */
+#my-email, #my-phone {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+/* Links: remove underline, use pointer cursor, white color, and add a text shadow for legibility. */
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #ffffff;
+    text-shadow: 4px 4px 3px #00000033;
+}
+
+/* a:visited is intentionally commented out; keep visited links same color if re-enabled. */
+/* a:visited {
+    color: #ffffff;
+} */
+
+/* Headings get a subtle shadow for depth; reset margins and add vertical padding. */
+h1, h2 {
+    text-shadow: 1.5px 1.5px #00000037;
+    margin: 0;
+    padding: 10px 0;
+}
+
+/* Main content: semi-transparent white background for readability, rounded corners, padding, and shadow. */
+main {
+    background-color: #FFFFFF7F;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 1px 15px;
+    box-shadow: 0 4px 12px #0000004D;
+}
+
+/* Section headings underlined for emphasis (may be adjusted if <hr/> elements are preferred). */
+h2 {
+    text-decoration: underline;
+}
+
+/* Summary paragraph spacing: indent first line and add left padding for a paragraph-style look. */
+#summary {
+    padding-left: 1.5em;
+    text-indent: 2em;
+}
+
+/* Center tables horizontally within their container. */
+table {
+    margin: 0 auto;
+}
+
+/* Horizontal padding around table cells for spacing. */
+td, th {
+    padding: 0 4vw;
+}
+
+/* Footer: centered text, slightly smaller font, muted color, and top margin. */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #333333;
+    margin-top: 20px;
+}
+
+/* Buttons: pointer cursor, white text on a black background by default. */
+button {
+    cursor: pointer;
+    color: white;
+    background-color: #000000;
+}
+
+/* Inputs, textareas, and buttons share visual styling: no border, padding, margin, rounded corners, shadow, and constrained width on mobile. */
+input, textarea, button {
+    border: none;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px #00000066;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Focus state for inputs, textareas, and buttons: remove default outline, add glow, subtle background change, and smooth transition. */
+input:focus, textarea:focus, button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #00C8FF;
+    background-color: #e0f7ff;
+    transition: all 0.5s ease;
+}
+
+/* Buttons on focus use black text for better contrast against the light focus background. */
+button:focus {
+    color: black;
+}
+
+/* Reduce vertical spacing for the last two paragraphs in the body for tighter layout. */
+body p:last-of-type, body p:nth-last-of-type(2) {
+    margin: 5px 0;
+}
+
+/* Ensure the very last paragraph has some extra bottom margin for breathing room. */
+body p:last-of-type {
+    margin-bottom: 20px;
+}
+
+/* Professional/socials title: underlined and bold for emphasis. */
+#prof-socials-title {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Desktop-friendly adjustments for viewports 760px and wider. */
+@media (min-width: 760px) {
+    /* Increase body padding on larger screens. */
+    body {
+        padding: 20px;
+    }
+    
+    /* Header on desktop: arrange items horizontally and distribute space between them. */
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    
+    /* Larger name heading for desktop readability. */
+    h1 {
+        font-size: 3em;
+    }
+    
+    /* Align contact info to the right on desktop and remove the mobile top margin. */
+    #contact {
+        text-align: right;
+        align-self: end;
+        margin-top: 0;
+    }
+    
+    /* Main content: increase horizontal padding and slightly adjust margins for larger viewports. */
+    main {
+        padding: 1px 20px;
+        margin: 15px 0;
+    }
+    
+    /* Link hover: change color and increase text-shadow with a transition for a noticeable effect. */
+    a:hover {
+        color: #000000;
+        text-shadow: 4px 4px 4px #ff0000b5;
+        transition: color .8s ease, text-shadow 0.8s ease;
+    }
+
+    /* Table font sizing for desktop. */
+    table {
+        font-size: 1em;
+    }
+    
+    /* Increase horizontal padding for table cells on larger screens. */
+    td, th {
+        padding: 0 8vw;
+    }
+    
+    /* On desktop, inputs, textareas, and buttons expand to their intrinsic width instead of filling the container. */
+    input, textarea, button {
+        width: auto;
+        max-width: none;
+        padding: 8px;
+    }
+
+    /* Restore text cursor for editable inputs and textareas. */
+    input, textarea {
+        cursor: text;
+    }
+
+    /* Button hover: subtle shadow color change with a smooth transition. */
+    button:hover {
+        box-shadow: 0 2px 4px #ff00008a;
+        transition: box-shadow 0.8s ease;
+    }
+}
